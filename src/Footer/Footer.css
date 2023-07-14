@@ -1,0 +1,57 @@
+.section-footer {
+    padding: 3rem 0;
+    background-color: whitesmoke;
+
+}
+
+
+.about {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.call {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.end {
+    text-align: center;
+    max-width: 120rem;
+    margin: 0 auto;
+    align-items: center;
+    padding: 5rem 0;
+
+}
+
+.social-site {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.social-site ion-icon {
+    font-size: 4rem;
+    color: blueviolet;
+    padding: 0 1rem;
+}
+
+/* MEDIA  */
+
+@media (max-width:1000px) {
+
+    .section-footer .grid-two-column {
+        grid-template-columns: 1fr;
+
+    }
+
+    .call {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+}

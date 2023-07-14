@@ -1,0 +1,135 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5rem;
+    height: 8rem;
+    box-shadow: 0 0.1rem 0.8rem #777;
+    width: 100%;
+
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    background-color: white;
+}
+
+
+
+
+.logo {
+    font-size: 3rem;
+    color:blueviolet;
+    font-weight: bold;
+}
+
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar .ul-list {
+    display: flex;
+    gap: 5rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-list {
+
+    font-size: 2rem;
+    color: black;
+    font-weight: 900;
+    transition: all linear 0.3s;
+    text-transform: uppercase;
+
+}
+
+.nav-list:hover {
+    color:blueviolet;
+}
+
+
+
+.hamburger-btn {
+    display: none;
+}
+
+.hamburger-btn ion-icon {
+    font-size: 4rem;
+    cursor: pointer;
+}
+
+.hamburger-btn ion-icon[name="close-outline"] {
+    display: none;
+}
+
+
+/* RESPONSIVE  */
+
+
+
+@media (max-width:1100px) {
+
+    .header {
+        position: relative;
+        z-index: 9999;
+    }
+
+    .nav-list {
+        font-size: 3rem;
+    }
+
+
+
+    .navbar .ul-list {
+        position: absolute;
+        width: 100vw;
+        height: 100vh;
+        top: 100%;
+        left: 0;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+        opacity: 0;
+        visibility: hidden;
+
+        transform: translateX(100%);
+        transition: all 0.3s;
+        
+        background-color:white;
+        margin-top: 0.9rem;
+    }
+
+    .hamburger-btn {
+        display: block;
+        z-index: 999;
+    }
+
+    .active .hamburger-btn ion-icon {
+        display: none;
+        z-index: 999;
+    }
+
+    .hamburger-btn ion-icon[name="menu-outline"] {
+        position: absolute;
+        top: 25%;
+        right: 5%;
+    }
+
+    .active .hamburger-btn ion-icon[name="close-outline"] {
+        display: block;
+        position: absolute;
+        top: 25%;
+        right: 5%;
+    }
+
+    .active .ul-list {
+        visibility: visible;
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
